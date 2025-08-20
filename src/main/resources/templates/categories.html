@@ -7,18 +7,18 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+    <div class="container text-center">
         <div><H1>Category List</H1></div>
-        <div class="p-2">
-            <table class="table">
-                <thead>
+        <div>
+            <table class="table table-bordered">
+                <thead class="table-dark">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <th:block th:each="category : ${categories}">
+                    <th:block th:each="category : ${listCategories}">
                         <tr>
                             <td th:text="${category.id}"></td>
                             <td th:text="${category.name}"></td>

@@ -23,4 +23,10 @@ public class CategoryController {
         model.addAttribute("listCategories", listCategories);
         return "categories";
     }
+
+    @GetMapping("/categories/new")
+    public String showNewCategoryForm(Model model) {
+        model.addAttribute("category", new Category());
+        return "category_form";
+    }
 }
